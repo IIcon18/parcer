@@ -1,0 +1,154 @@
+body {
+	background-color: #333; /* Темный фон страницы */
+	color: #fff; /* Белый цвет текста */
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6; /* Увеличение межстрочного интервала для лучшей читаемости */
+}
+
+header {
+	background-color: #444; /* Чуть светлее темного фона */
+	text-align: center;
+	padding: 20px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	margin: 0;
+	font-size: 24px;
+	color: #fff;
+}
+
+.subheader {
+	background-color: #444; /* Чуть светлее темного фона */
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subheader form {
+	display: inline-block;
+	text-align: center;
+}
+
+.subheader label {
+	margin-right: 10px;
+	color: #ccc; /* Светлый серый для текста в форме */
+}
+
+.subheader input[type='text'] {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #888; /* Светлый серый для рамки инпута */
+	border-radius: 4px;
+	outline: none;
+	box-sizing: border-box;
+	background-color: #444; /* Фон инпута чуть светлее основного фона */
+	color: #fff; /* Белый цвет текста в инпуте */
+}
+
+.subheader button {
+	padding: 8px 16px;
+	font-size: 16px;
+	background-color: #888; /* Светлый серый для кнопки */
+	color: #fff;
+	border: 1px solid #888;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.subheader button:hover {
+	background-color: #666; /* Темно-серый при наведении */
+}
+
+.container {
+	width: 80%;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.left-column {
+	width: calc(50% - 10px);
+}
+
+.right-column {
+	width: calc(50% - 10px);
+}
+
+.vacancies,
+.resumes {
+	background-color: #444; /* Чуть светлее темного фона */
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vacancies h2,
+.resumes h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.vacancies ul,
+.resumes ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.vacancies li,
+.resumes li {
+	background-color: #333; /* Цвет фона контейнеров */
+	border: 1px solid #555; /* Светлый серый для рамки */
+	padding: 10px;
+	margin-bottom: 10px;
+	transition: transform 0.3s ease; /* Плавное изменение при увеличении */
+}
+
+.vacancies li:hover,
+.resumes li:hover {
+	transform: scale(1.05); /* Увеличение элемента при наведении */
+}
+
+.vacancies .field-label,
+.resumes .field-label {
+	font-weight: bold;
+	color: #fff;
+}
+
+.vacancies .field-value, {
+    color: #ccc; /* Светло-серый цвет для текста в контейнерах */
+    white-space: pre-line; /* Сохранение пробелов и переносов строк */
+    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
+}
+
+.resumes .field-value {
+    color: #ccc; /* Светло-серый цвет для текста в контейнерах */
+    white-space: pre-line; /* Сохранение пробелов и переносов строк */
+    word-break: break-all; /* Разрыв слов на части */
+    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
+}
+
+
+.vacancy-salary {
+    font-style: italic;
+    color: #f90;
+    margin-top: 5px; /* Уменьшенный отступ над зарплатой */
+}
+
+.vacancies a,
+.resumes a {
+	color: #fff; /* Цвет ссылок такой же, как и основной текст */
+	text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.vacancies a:hover,
+.resumes a:hover {
+	text-decoration: underline; /* Подчеркиваем ссылки при наведении */
+}

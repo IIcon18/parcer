@@ -1,6 +1,4 @@
 from django.shortcuts import render
-
-from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Job, Anketa
@@ -46,5 +44,5 @@ def index(request):
         'vacancies_query': vacancies_query,
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'main/index.html', context)
 

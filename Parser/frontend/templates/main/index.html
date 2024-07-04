@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Платформа Парсинга Данных о Соискателях и Вакансиях с Habr Карьера
+		</title>
+		<link rel="stylesheet" href="{% static 'main/index.css' %}" />
+	</head>
+	<body>
+		<header>
+			<h1>Платформа Парсинга Резюме и Вакансий на Habr Карьера</h1>
+		</header>
+		<div class="subheader">
+			<form method="POST">
+				{% csrf_token %}
+				<label for="vacancies_query">Поиск вакансий:</label>
+				<input
+					type="text"
+					id="vacancies_query"
+					name="vacancies_query"
+					value="{{ vacancies_query }}"
+				/>
+				<button type="submit">Поиск</button>
+			</form>
+		</div>
+		<div class="container">
+			<div class="left-column">
+				<div class="vacancies">
+					<h2>Вакансии ({{ vacancies|length }})</h2>
+					<ul>
+						{% for vacancy in vacancies %}
+						<li>
+							<div class="field-label">
+								<a href="{{ vacancy.link }}">{{ vacancy.title }}</a>
+							</div>
+							<div class="field-value">
+								{{ vacancy.company }} ({{ vacancy.location }})
+							</div>
+							<div class="field-value">
+								{% if vacancy.salary %}
+								<span class="vacancy-salary"
+									>Зарплата: {{ vacancy.salary }}</span
+								>
+								{% else %}
+								<span>Зарплата: Не указана</span>
+								{% endif %}
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="right-column">
+				<div class="resumes">
+					<h2>Резюме ({{ resumes|length }})</h2>
+					<ul>
+						{% for resume in resumes %}
+						<li>
+							<div class="field-label">
+								<a href="{{ resume.link }}">{{ resume.name }}</a>
+							</div>
+							<div class="field-value">
+								<span>{{ resume.position }}</span> —
+								<span>Навыки: {{ resume.skills }}</span>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
