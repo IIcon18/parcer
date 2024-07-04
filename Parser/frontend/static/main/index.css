@@ -122,24 +122,20 @@ header h1 {
 	color: #fff;
 }
 
-.vacancies .field-value, {
-    color: #ccc; /* Светло-серый цвет для текста в контейнерах */
-    white-space: pre-line; /* Сохранение пробелов и переносов строк */
-    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
+.vacancies .field-value {
+	color: #ccc; /* Светло-серый цвет для текста в контейнерах */
 }
 
 .resumes .field-value {
-    color: #ccc; /* Светло-серый цвет для текста в контейнерах */
-    white-space: pre-line; /* Сохранение пробелов и переносов строк */
-    word-break: break-all; /* Разрыв слов на части */
-    margin-bottom: 5px; /* Уменьшенный отступ между элементами */
+	color: #ccc; /* Светло-серый цвет для текста в контейнерах */
+	word-break: break-all; /* Разрыв слов на части */
+	margin-bottom: 5px; /* Уменьшенный отступ между элементами */
 }
 
-
 .vacancy-salary {
-    font-style: italic;
-    color: #f90;
-    margin-top: 5px; /* Уменьшенный отступ над зарплатой */
+	font-style: italic;
+	color: #f90;
+	margin-top: 5px; /* Уменьшенный отступ над зарплатой */
 }
 
 .vacancies a,
