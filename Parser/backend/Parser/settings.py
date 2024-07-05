@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'Parser.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'practica',
-        'USER': 'admin',
-        'PASSWORD': 'Rqsdtghyi56!',
+        'NAME': 'practica1',
+        'USER': 'new_admin',
+        'PASSWORD': 'NewSecurePassword123!',
         'HOST': 'localhost',  # Имя сервиса базы данных из docker-compose.yml
         'PORT': '5432',
     }
