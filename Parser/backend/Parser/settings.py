@@ -79,17 +79,6 @@ WSGI_APPLICATION = 'Parser.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-'''DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'practica1',
-        'USER': 'new_admin',
-        'PASSWORD': 'NewSecurePassword123!',
-        'HOST': 'localhost',  # Имя сервиса базы данных из docker-compose.yml
-        'PORT': '5432',
-    }
-}'''
-
 
 DATABASES = {
     'default': dj_database_url.config(default='postgres://new_admin:NewSecurePassword123!@db:5432/practica1')
