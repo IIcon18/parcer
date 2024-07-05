@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+
 
 # Остальные настройки...
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'Parser.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'practica1',
@@ -86,6 +88,11 @@ DATABASES = {
         'HOST': 'localhost',  # Имя сервиса базы данных из docker-compose.yml
         'PORT': '5432',
     }
+}'''
+
+
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://new_admin:NewSecurePassword123!@db:5432/practica1')
 }
 
 
